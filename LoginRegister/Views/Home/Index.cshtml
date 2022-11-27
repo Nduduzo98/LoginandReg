@@ -1,0 +1,26 @@
+﻿@model LoginRegister.User
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row justify-content-md-start">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Wellcome
+            </div>
+            <div class="card-body">
+                @if (Session["fullName"] != null)
+                {
+                    <p>Name: @Session["fullName"].ToString()</p>
+                    <p>Email: @Session["email"].ToString()</p>
+                    <a href="@Url.Action("Logout","Home")" class="btn btn-warning">Logout</a>
+                }
+            </div>
+        </div>
+
+    </div>
+</div>
+
